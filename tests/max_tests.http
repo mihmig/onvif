@@ -1,0 +1,95 @@
+### https://dev.max.ru/docs-api/methods/GET/updates
+###
+
+### Получение информации о боте
+GET https://platform-api2.max.ru/me
+Accept: application/json
+Authorization: {{bot_token}}
+
+
+### Получение списка всех групповых чатов
+GET https://platform-api2.max.ru/chats
+Authorization: {{bot_token}}
+
+### Получение обновлений (long polling)
+GET https://platform-api2.max.ru/updates?marker=0&timeout=2
+Authorization: {{bot_token}}
+
+> {% client.global.set("marker", response.body.marker); %}
+
+### Получение подписок (webhook-ов)
+GET https://platform-api2.max.ru/subscriptions
+Authorization: {{bot_token}}
+
+### Удаление подписки
+DELETE https://platform-api2.max.ru/subscriptions?url=https://b14143.jetbot24.ru/webhooks/max/2193:ewRNLg28ccUyngxRjpu7Ap2vQGC4ggcTduqkBGDoQ3Oi0HmR4ssbGpNyGEYblXdU
+Authorization: {{bot_token}}
+
+### Получение членов чата ("title": "Развлечёба")
+GET https://platform-api2.max.ru/chats/-74736302262798/members
+Authorization: {{bot_token}}
+
+
+
+### Отправить сообщение пользователю (Сергей Сберов)
+POST https://platform-api2.max.ru/messages?user_id=138414350
+Authorization: {{bot_token}}
+Content-Type: application/json
+
+{
+  "text": "Это сообщение с кнопкой-ссылкой",
+  "attachments": [
+    {
+      "type": "inline_keyboard",
+      "payload": {
+        "buttons": [
+          [
+            {
+              "type": "link",
+              "text": "Откройте сайт ✅❌",
+              "url": "https://max.ru"
+            }
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+### Сообщение пользователю с клавиатурой
+POST https://platform-api2.max.ru/messages?user_id=6084416
+Authorization: {{bot_token}}
+Content-Type: application/json
+
+{
+  "text": "Это сообщение с клавиатурой\nInline-клавиатура может иметь до 210 кнопок, сгруппированных в 30 рядов — до 7 кнопок в каждом\n(до 3, если это кнопки типа link, openapp, requestgeolocation или requestcontact).",
+  "attachments": [
+    {
+      "type": "inline_keyboard",
+      "payload": {
+        "buttons": [
+          [
+            {
+              "type": "callback",
+              "text": "✅ Да",
+              "payload": "yes"
+            },
+            {
+              "type": "callback",
+              "text": "❌ Нет",
+              "payload": "no"
+            }
+          ],
+          [{"type": "callback", "text": "1", "payload": "1"},
+           {"type": "callback", "text": "2", "payload": "2"},
+           {"type": "callback", "text": "3", "payload": "3"},
+           {"type": "callback", "text": "4", "payload": "4"},
+           {"type": "callback", "text": "5", "payload": "5"},
+           {"type": "callback", "text": "6", "payload": "6"},
+           {"type": "callback", "text": "7", "payload": "7"}
+          ]
+        ]
+      }
+    }
+  ]
+}

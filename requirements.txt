@@ -1,0 +1,9 @@
+requests~=2.34.2
+retrying~=1.4.2
+python-dotenv~=1.2.2
+pydantic~=2.13.0
+onvif-python~=0.2.11
+PyYAML~=6.0.3
+av~=18.1.0
+opencv-python~=5.0.0.93
+numpy~=2.5.3

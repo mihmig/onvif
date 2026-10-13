@@ -1,0 +1,31 @@
+# Пользователи, которым разрешено менять уровень логирования ботов
+# командой /log <DEBUG|INFO|WARNING|ERROR> (id берётся у @userinfobot)
+admin_ids:
+  - 47254369 # Миша
+  - 83281199 # Мегаян
+  - 149098947 # Миша Билайн
+cameras:
+  - id: "camera-1"
+    name: "Hikvision DS-2DE2C400MWG-E"
+    profile_token: "Profile_1"
+    # Замените на IP вашей камеры
+    host: "192.168.1.64"
+    port: 80
+    # Пользователь, созданный в Integration Protocol
+    user: "onvif1"
+    pass: "********"
+    # Время движения в секундах после одного нажатия
+    ptz_duration: 0.8
+    # Скорость движения (от 0.1 до 1.0)
+    ptz_speed: 0.5
+    # Длительность ролика в секундах по кнопке Видео
+    video_duration: 10
+    # Каталог для записанных роликов
+    video_dir: "data"
+    # id Telegram-чата
+    chat_id: -78724728916494
+    max_bot_token: "*********************************"
+    # Телеграм-бот (worker_telegram.py): токен от @BotFather
+    telegram_bot_token: "**********:*********************************"
+    # Идентификатор чата в Телеграме — он свой, не такой, как chat_id в MAX
+    telegram_chat_id: -1001234567890

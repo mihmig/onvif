@@ -1,0 +1,302 @@
+{
+  "updates": [
+    {
+      "callback": {
+        "timestamp": 1788793319312,
+        "callback_id": "f9LHodD0cOINXt_oYsRG2zjRWyZSSf1pxrcGBCMM5t-fv1Zkv3QttVLyyjOLmltCVqfY_x2lmXw1hm5JWBu9JVA3SOj9dDjmuiw3bjsegs5h0_LZ9e6P",
+        "user": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        },
+        "payload": "ptz-right-down"
+      },
+      "timestamp": 1788793319312,
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 138414350
+        },
+        "timestamp": 1788785281769,
+        "body": {
+          "mid": "mid.00000000060e495d01a07be94ae96425",
+          "seq": 117229832226038821,
+          "text": "Снимок от 2026-09-07 15:22:34",
+          "attachments": [
+            {
+              "payload": {
+                "photo_id": 35981974355,
+                "token": "so3rapJG9mhwZwcbx2w+gG8btTw34NnIyhhNM30TpGuigZhDylsIpy7gAomsoDKyb8wzwtAn9kvXYXNl9A64nbJ8zpidBc+ShG/6UHrBMxzUUBQUzWmyyuOS6ym60RW2",
+                "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr82RY7RrD4UkhQn1r0uXjdOcNMOiF-cR548ZIRm2RW8d0"
+              },
+              "type": "image"
+            }
+          ]
+        },
+        "sender": {
+          "user_id": 240009299,
+          "first_name": "Буква4орик",
+          "is_bot": true,
+          "username": "id290301014391_3_bot",
+          "last_activity_time": 1788797483388,
+          "name": "Буква4орик"
+        }
+      },
+      "user_locale": "ru",
+      "update_type": "message_callback"
+    },
+    {
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 240009299
+        },
+        "timestamp": 1788797107604,
+        "body": {
+          "mid": "mid.00000000060e495d01a07c9dbd947ba3",
+          "seq": 117230607243967395,
+          "text": "456"
+        },
+        "sender": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        }
+      },
+      "timestamp": 1788797107604,
+      "user_locale": "ru",
+      "update_type": "message_created"
+    },
+    {
+      "callback": {
+        "timestamp": 1788797399800,
+        "callback_id": "f9LHodD0cOJiQgHCRzikno6eonHXvJeh8zrMvRyBUNYv2XKvvq6V9jFoNLd0yFXAPJF2uNW8yBD3fkg3D0kRg94Mf5kNTNmWbOYZ78fvyB3g9fbuIVuO",
+        "user": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        },
+        "payload": "ptz-right"
+      },
+      "timestamp": 1788797399800,
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 138414350
+        },
+        "timestamp": 1788797385699,
+        "body": {
+          "mid": "mid.00000000060e495d01a07ca1fbe35085",
+          "seq": 117230625469190277,
+          "text": "Снимок от 2026-09-07 15:22:34",
+          "attachments": [
+            {
+              "payload": {
+                "photo_id": 35981974355,
+                "token": "xFmR7s985VRwkqr9LxRSIB0UKnPzQU07kFTfuPCYvdMuG/nRZEzqW47Y8An5KYp4ZJ7yobaSlqq6v9fUdg+lkEw4OLmZEXkPu1fD23Z+y+RFWm3xPZC2XJF1Gh/jLT75",
+                "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr82RY7RrD4UkhQn1r0uXjdOcNMOiF-cR548ZIRm2RW8d0"
+              },
+              "type": "image"
+            },
+            {
+              "payload": {
+                "buttons": [
+                  [
+                    {
+                      "payload": "ptz-left-up",
+                      "text": "↖️",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "ptz-up",
+                      "text": "⬆️",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "ptz-right-up",
+                      "text": "↗️",
+                      "type": "callback"
+                    }
+                  ],
+                  [
+                    {
+                      "payload": "ptz-left",
+                      "text": "⬅️",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "make-foto",
+                      "text": "📸 Фото",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "ptz-right",
+                      "text": "➡️",
+                      "type": "callback"
+                    }
+                  ],
+                  [
+                    {
+                      "payload": "ptz-left-down",
+                      "text": "↙️",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "ptz-down",
+                      "text": "⬇️",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "ptz-right-down",
+                      "text": "↘️",
+                      "type": "callback"
+                    }
+                  ],
+                  [
+                    {
+                      "payload": "make-video",
+                      "text": "🎥 Видео (10 с.)",
+                      "type": "callback"
+                    },
+                    {
+                      "payload": "settings",
+                      "text": "⚙️ Настройки",
+                      "type": "callback"
+                    }
+                  ]
+                ]
+              },
+              "type": "inline_keyboard"
+            }
+          ]
+        },
+        "sender": {
+          "user_id": 240009299,
+          "first_name": "Буква4орик",
+          "is_bot": true,
+          "username": "id290301014391_3_bot",
+          "last_activity_time": 1788797483392,
+          "name": "Буква4орик"
+        }
+      },
+      "user_locale": "ru",
+      "update_type": "message_callback"
+    },
+    {
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 240009299
+        },
+        "timestamp": 1788797417048,
+        "body": {
+          "mid": "mid.00000000060e495d01a07ca276585468",
+          "seq": 117230627523679336,
+          "text": "Лужайка",
+          "attachments": [
+            {
+              "payload": {
+                "photo_id": 36127623694,
+                "token": "xc25mN5XF2gr2qc9K1AVunBEdZjAENfPmR5GX96RqoPk5nIXipiVvlSdDmOmnbaT758r2vpql2Dd3SMJWTgrH3lTXO1KS5CrT5OlTui/4Io=",
+                "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr8AVo1FNKh3AnlZ36CdKfOwcNMOiF-cR548ZIRm2RW8d0"
+              },
+              "type": "image"
+            }
+          ]
+        },
+        "sender": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        }
+      },
+      "timestamp": 1788797417048,
+      "user_locale": "ru",
+      "update_type": "message_created"
+    },
+    {
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 240009299
+        },
+        "timestamp": 1788797423402,
+        "body": {
+          "mid": "mid.00000000060e495d01a07ca28f2a3824",
+          "seq": 117230627940087844,
+          "text": "Только текст"
+        },
+        "sender": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        }
+      },
+      "timestamp": 1788797423402,
+      "user_locale": "ru",
+      "update_type": "message_created"
+    },
+    {
+      "message": {
+        "recipient": {
+          "chat_type": "dialog",
+          "chat_id": 101599581,
+          "user_id": 240009299
+        },
+        "timestamp": 1788797447372,
+        "body": {
+          "mid": "mid.00000000060e495d01a07ca2eccc7ab5",
+          "seq": 117230629511002805,
+          "text": "",
+          "attachments": [
+            {
+              "payload": {
+                "max_info": {
+                  "user_id": 6084416,
+                  "first_name": "Андрей",
+                  "is_bot": false,
+                  "last_name": "Самойлов",
+                  "last_activity_time": 0,
+                  "name": "Андрей Самойлов"
+                }
+              },
+              "type": "contact"
+            }
+          ]
+        },
+        "sender": {
+          "user_id": 138414350,
+          "first_name": "Сергей",
+          "is_bot": false,
+          "last_name": "Сберов",
+          "last_activity_time": 1788797455000,
+          "name": "Сергей Сберов"
+        }
+      },
+      "timestamp": 1788797447372,
+      "user_locale": "ru",
+      "update_type": "message_created"
+    }
+  ],
+  "marker": 202117
+}

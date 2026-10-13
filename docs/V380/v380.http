@@ -1,0 +1,211 @@
+### GetDeviceInformation
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+< GetDeviceInformation.xml
+
+### GetCapabilities
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+< GetCapabilities.xml
+
+### GetProfiles
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tde:GetProfiles/>
+  </s:Body>
+</s:Envelope>
+
+### GetStream_000
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:trt="http://www.onvif.org/ver10/media/wsdl"
+ xmlns:tt="http://www.onvif.org/ver10/schema">
+  <s:Body>
+    <trt:GetStreamUri>
+      <trt:StreamSetup>
+        <tt:Stream>RTP-Unicast</tt:Stream>
+        <tt:Transport>
+          <tt:Protocol>RTSP</tt:Protocol>
+        </tt:Transport>
+      </trt:StreamSetup>
+      <trt:ProfileToken>PROFILE_000</trt:ProfileToken>
+    </trt:GetStreamUri>
+  </s:Body>
+</s:Envelope>
+
+### GetStream_001
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+ xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+ xmlns:trt="http://www.onvif.org/ver10/media/wsdl"
+ xmlns:tt="http://www.onvif.org/ver10/schema">
+  <s:Body>
+    <trt:GetStreamUri>
+      <trt:StreamSetup>
+        <tt:Stream>RTP-Unicast</tt:Stream>
+        <tt:Transport>
+          <tt:Protocol>RTSP</tt:Protocol>
+        </tt:Transport>
+      </trt:StreamSetup>
+      <trt:ProfileToken>PROFILE_001</trt:ProfileToken>
+    </trt:GetStreamUri>
+  </s:Body>
+</s:Envelope>
+
+### GetPTZConfigurations
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tds:GetPTZConfigurations>
+      <tds:Category>All</tds:Category>
+    </tds:GetPTZConfigurations>
+  </s:Body>
+</s:Envelope>
+
+### PtzRight
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+        xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:tptz="http://www.onvif.org/ver20/ptz/wsdl"
+        xmlns:tt="http://www.onvif.org/ver10/schema">
+    <s:Body>
+        <tptz:ContinuousMove>
+            <tptz:ProfileToken>PROFILE_000</tptz:ProfileToken>
+            <tptz:Velocity>
+                <tt:PanTilt x="0.5" y="0.0"/>
+            </tptz:Velocity>
+            <tptz:Timeout>PT1S</tptz:Timeout>
+        </tptz:ContinuousMove>
+    </s:Body>
+</s:Envelope>
+
+### PtzLeft+Down
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:tptz="http://www.onvif.org/ver20/ptz/wsdl" xmlns:tt="http://www.onvif.org/ver10/schema">
+<s:Body>
+    <tptz:ContinuousMove>
+        <tptz:ProfileToken>PROFILE_000</tptz:ProfileToken>
+        <tptz:Velocity>
+            <tt:PanTilt x="-1" y="-0.5"/>
+        </tptz:Velocity>
+        <tptz:Timeout>PT1S</tptz:Timeout>
+    </tptz:ContinuousMove>
+</s:Body>
+</s:Envelope>
+
+### Ptz Right+UP
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:tptz="http://www.onvif.org/ver20/ptz/wsdl" xmlns:tt="http://www.onvif.org/ver10/schema">
+<s:Body>
+    <tptz:ContinuousMove>
+        <tptz:ProfileToken>PROFILE_000</tptz:ProfileToken>
+        <tptz:Velocity>
+            <tt:PanTilt x="1" y="1"/>
+        </tptz:Velocity>
+        <tptz:Timeout>PT1S</tptz:Timeout>
+    </tptz:ContinuousMove>
+</s:Body>
+</s:Envelope>
+
+
+### GetNodes
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tds:GetNodes>
+      <tds:Category>All</tds:Category>
+    </tds:GetNodes>
+  </s:Body>
+</s:Envelope>
+
+### GetStatus (бесполезен)
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tds:GetStatus>
+      <tds:Category>All</tds:Category>
+    </tds:GetStatus>
+  </s:Body>
+</s:Envelope>
+
+
+### GetEventProperties
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tev:GetEventProperties/>
+  </s:Body>
+</s:Envelope>
+
+### Создаём подписку
+POST {{base_url}}/onvif/event_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:tev="http://www.onvif.org/ver10/events/wsdl" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2">
+<s:Body>
+<tev:CreatePullPointSubscription>
+    <wsnt:InitialTerminationTime>PT600S</wsnt:InitialTerminationTime>
+</tev:CreatePullPointSubscription>
+</s:Body>
+</s:Envelope>
+
+
+### Получаем события
+POST {{base_url}}/event_service/0
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:tev="http://www.onvif.org/ver10/events/wsdl">
+    <s:Body>
+        <tev:PullMessages>
+            <tev:Timeout>PT10S</tev:Timeout>
+            <tev:MessageLimit>10</tev:MessageLimit>
+        </tev:PullMessages>
+    </s:Body>
+</s:Envelope>
+
+
+### Снимок
+GET {{base_url}}/snapshot/PROFILE_001

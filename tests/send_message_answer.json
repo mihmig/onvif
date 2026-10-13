@@ -1,0 +1,87 @@
+{
+  "message": {
+    "recipient": {
+      "chat_type": "dialog",
+      "chat_id": 236099347,
+      "user_id": 6084416
+    },
+    "timestamp": 1788900688340,
+    "body": {
+      "mid": "mid.000000000e12971301a082ca41d40311",
+      "seq": 117237395511051025,
+      "text": "Это сообщение с клавиатурой\nInline-клавиатура может иметь до 210 кнопок, сгруппированных в 30 рядов — до 7 кнопок в каждом\n(до 3, если это кнопки типа link, openapp, requestgeolocation или requestcontact).",
+      "attachments": [
+        {
+          "type": "image",
+          "payload": {
+            "token": "9cwUJmp+//BKrg2C3ePRiBFrSrBjN7w/s0XBlDFpVeSGUgkBR5e8YzerKUnEfuyKRTAf6lJC5+sonfsa5lzU7T+cg/PuKbOWTfAo7VlhsTSFyu4DrzyhWIXYm4E1GbCVWfXDymvGU5y0ghK5MMrMLlKTzMcSCVYUWC24i0cynBMw3eHqX8IUE0xJemND9EIRL6T3stGX8G03kPV36wIJQacDvjsm+3+9tgYQxNvM7tw="
+          }
+        },
+        {
+          "payload": {
+            "buttons": [
+              [
+                {
+                  "payload": "yes",
+                  "text": "✅ Да",
+                  "type": "callback"
+                },
+                {
+                  "payload": "no",
+                  "text": "❌ Нет",
+                  "type": "callback"
+                }
+              ],
+              [
+                {
+                  "payload": "1",
+                  "text": "1",
+                  "type": "callback"
+                },
+                {
+                  "payload": "2",
+                  "text": "2",
+                  "type": "callback"
+                },
+                {
+                  "payload": "3",
+                  "text": "3",
+                  "type": "callback"
+                },
+                {
+                  "payload": "4",
+                  "text": "4",
+                  "type": "callback"
+                },
+                {
+                  "payload": "5",
+                  "text": "5",
+                  "type": "callback"
+                },
+                {
+                  "payload": "6",
+                  "text": "6",
+                  "type": "callback"
+                },
+                {
+                  "payload": "7",
+                  "text": "7",
+                  "type": "callback"
+                }
+              ]
+            ]
+          },
+          "type": "inline_keyboard"
+        }
+      ]
+    },
+    "sender": {
+      "user_id": 240009299,
+      "first_name": "Буква4орик",
+      "is_bot": true,
+      "username": "id290301014391_3_bot",
+      "last_activity_time": 1788900688357,
+      "name": "Буква4орик"
+    }
+  }
+}

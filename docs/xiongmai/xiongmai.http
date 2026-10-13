@@ -1,0 +1,83 @@
+### GetDeviceInformation
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+  <s:Body>
+    <tds:GetDeviceInformation xmlns:tds="http://www.onvif.org/ver10/device/wsdl"/>
+  </s:Body>
+</s:Envelope>
+
+### GetCapabilities
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tds:GetCapabilities>
+      <tds:Category>All</tds:Category>
+    </tds:GetCapabilities>
+  </s:Body>
+</s:Envelope>
+
+### GetProfiles
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+  <s:Body>
+    <tde:GetProfiles/>
+  </s:Body>
+</s:Envelope>
+
+
+### GetSnapshotUri
+GET {{base_url}}/onvif/media_service
+Authorization: Digest {{username}} {{password}}
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:trt="http://www.onvif.org/ver10/media/wsdl">
+
+  <s:Body>
+    <trt:GetSnapshotUri>
+      <trt:ProfileToken>002</trt:ProfileToken>
+    </trt:GetSnapshotUri>
+  </s:Body>
+
+</s:Envelope>
+EOF
+
+### getSnapshot (800*448)
+GET {{base_url}}/webcapture.jpg?command=snap&amp;channel=0&amp;user={{username}}&amp;password={{password}}
+
+### GetStreamUri
+POST {{base_url}}/onvif/media_service
+Content-Type: application/soap+xml; charset=utf-8
+
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:trt="http://www.onvif.org/ver10/media/wsdl"
+    xmlns:tt="http://www.onvif.org/ver10/schema">
+
+  <s:Body>
+    <trt:GetStreamUri>
+      <trt:StreamSetup>
+        <tt:Stream>RTP-Unicast</tt:Stream>
+        <tt:Transport>
+          <tt:Protocol>RTSP</tt:Protocol>
+        </tt:Transport>
+      </trt:StreamSetup>
+      <trt:ProfileToken>001</trt:ProfileToken>
+    </trt:GetStreamUri>
+  </s:Body>
+
+</s:Envelope>

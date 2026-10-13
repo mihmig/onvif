@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<soap-env:Envelope xmlns:soap-env="http://www.w3.org/2003/05/soap-envelope">
+    <soap-env:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+            <wsse:UsernameToken>
+                <wsse:Username>onvif1</wsse:Username>
+                <wsse:Password
+                        Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">
+                    iHtADfAy9aGqZhBQbHGJLVYzagI=
+                </wsse:Password>
+                <wsse:Nonce
+                        EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">
+                    ULiOsuoKwvP2sss+W08ljQ==
+                </wsse:Nonce>
+                <wsu:Created
+                        xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+                    2026-08-19T06:40:22+00:00
+                </wsu:Created>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soap-env:Header>
+    <soap-env:Body>
+        <ns0:GetCapabilities xmlns:ns0="http://www.onvif.org/ver10/device/wsdl">
+            <ns0:Category>All</ns0:Category>
+        </ns0:GetCapabilities>
+    </soap-env:Body>
+</soap-env:Envelope>

@@ -1,0 +1,8 @@
+### Получение информации о боте
+GET {{base_url}}/getMe
+
+### Проверка webhook-а
+GET {{base_url}}/getWebhookInfo
+
+### Получение UPDATES
+GET {{base_url}}/getUpdates

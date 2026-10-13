@@ -1,0 +1,75 @@
+### Отправка картинки: шаг 1 - получение URL для загрузки
+#Доступные форматы: JPG, JPEG, PNG, GIF, TIFF, BMP, HEIC
+#Максимальный размер одного изображения: до 50 МБ или не более 7680 x 7680 px
+POST https://platform-api.max.ru/uploads?type=image
+Authorization: {{bot_token}}
+Content-Type: application/json
+
+> {%
+    client.global.set("upload_url", response.body.url);
+%}
+
+
+### Шаг 2: загрузка файла:
+### https://iu.oneme.ru/uploadImage?apiToken=6MqMkSQ6wD4appvNdfnPD7DCRFCjRcuVq4%2F24HGTOn1bxG9%2FPIlQQDdQp844r0iCQx9Uj%2BXupfI0S%2FDS%2FoSqjoC%2BYQQ6ZVIjNguoB%2BS%2FH7ghB4HotoN9Ja8SZ10ZbeoqQB%2BjMGl5tNxRYP%2B8QGGMgA%3D%3D&photoIds=oFT8EsjzS4faddZxQD0qRWmm74JYfv7zL3VYODpzeAZHRwg6%2FM0lGg%3D%3D
+POST {{upload_url}}
+Authorization: {access_token}
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="data"; filename="image.png"
+Content-Type: image/png
+
+< ../data/dog.jpg
+--WebAppBoundary--
+
+> {%
+    client.global.set("token", Object.values(response.body.photos)[0].token);
+%}
+
+### Получаем ответ в виде:
+#{
+#  "photos": {
+#    "0dyX0h6A8pNsGCpQnw2xaFXyJg1dYH8hDhZYK/fs18XPewueEGHXuA==": {
+#      "token": "9OIQV+Ar0tbdmQn86DgE78177EuZZLSzMJfXEiMSlFTYKiww2+bYYQvklBiS8Gqs5fZrSimaVxp/sjixGochjxQ958pZQv/Jnjda1L5DgCI2HME+jBCSgiNxtGPIrHX6y9CYxjv6eBcQXq0CMDw5SwWzp+ITa8l9TRWSQkzO+5N07RnDIU2RjA=="
+#    }
+#  }
+#}
+
+
+### Шаг 3: Отправка сообщения с id загруженного файла (Сергей Сберов)
+POST https://platform-api.max.ru/messages?user_id=138414350
+Authorization: {{bot_token}}
+Content-Type: application/json
+
+{
+    "text": "некое изображение",
+    "attachments": [
+        {
+            "type": "image",
+            "payload": {
+                "token": "{{token}}"
+            }
+        }
+    ]
+}
+
+
+###
+# "attachments": [
+#        {
+#          "payload": {
+#            "photo_id": 28584453715,
+#            "token": "r9Nro+0oOM99oTotJdYqdvOmqDSBnoOGCw6o0CUFQMlZSRQF8o49roZOSmroloraGDaB1z8SGKO/O3a1dZhaF7Lz8t/7rJpTUbCnHNh43is=",
+#            "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr8PqM7Xc3r2PFJEPZCa3M5McNMOiF-cR548ZIRm2RW8d0"
+#
+#},
+#          "type": "image"
+#
+#}
+# "photo_id": 28584453715,
+#            "token": "RomasA9nPIi1mkaVjQEefkvFbwMsLnTH0iPCIxHyTw4K+TJ4+34tTv6RL7Wg1oav/y4NwVdRGWJrtGWM+SLCYaOwNRgNwSF3a3IXUwYzIIE=",
+#            "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr8PqM7Xc3r2PFJEPZCa3M5McNMOiF-cR548ZIRm2RW8d0"
+# "photo_id": 28584453715,
+#            "token": "r9Nro+0oOM99oTotJdYqdvOmqDSBnoOGCw6o0CUFQMlZSRQF8o49roZOSmroloraGDaB1z8SGKO/O3a1dZhaF7Lz8t/7rJpTUbCnHNh43is=",
+#            "url": "https://i.oneme.ru/i?r=BTGBPUwtwgYUeoFhO7rESmr8PqM7Xc3r2PFJEPZCa3M5McNMOiF-cR548ZIRm2RW8d0"

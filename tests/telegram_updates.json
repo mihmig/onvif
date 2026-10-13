@@ -1,0 +1,171 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 17764581,
+      "message": {
+        "message_id": 10,
+        "from": {
+          "id": 47254369,
+          "is_bot": false,
+          "first_name": "Михаил",
+          "last_name": "Корнилов",
+          "username": "mihmig",
+          "language_code": "ru",
+          "is_premium": true
+        },
+        "chat": {
+          "id": 47254369,
+          "first_name": "Михаил",
+          "last_name": "Корнилов",
+          "username": "mihmig",
+          "type": "private"
+        },
+        "date": 1789029199,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 17764582,
+      "message": {
+        "message_id": 11,
+        "from": {
+          "id": 936804168,
+          "is_bot": false,
+          "first_name": "Тристакав Наносеков",
+          "username": "ntc_support",
+          "language_code": "ru"
+        },
+        "chat": {
+          "id": 936804168,
+          "first_name": "Тристакав Наносеков",
+          "username": "ntc_support",
+          "type": "private"
+        },
+        "date": 1789029381,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 17764583,
+      "my_chat_member": {
+        "chat": {
+          "id": -5383518304,
+          "title": "Видеонаблик-тест",
+          "type": "group",
+          "all_members_are_administrators": false
+        },
+        "from": {
+          "id": 47254369,
+          "is_bot": false,
+          "first_name": "Михаил",
+          "last_name": "Корнилов",
+          "username": "mihmig",
+          "language_code": "ru",
+          "is_premium": true
+        },
+        "date": 1789029850,
+        "old_chat_member": {
+          "user": {
+            "id": 6314326243,
+            "is_bot": true,
+            "first_name": "Видеонаблик",
+            "username": "video_telebot"
+          },
+          "status": "left"
+        },
+        "new_chat_member": {
+          "user": {
+            "id": 6314326243,
+            "is_bot": true,
+            "first_name": "Видеонаблик",
+            "username": "video_telebot"
+          },
+          "status": "member"
+        }
+      }
+    },
+    {
+      "update_id": 17764584,
+      "message": {
+        "message_id": 12,
+        "from": {
+          "id": 47254369,
+          "is_bot": false,
+          "first_name": "Михаил",
+          "last_name": "Корнилов",
+          "username": "mihmig",
+          "language_code": "ru",
+          "is_premium": true
+        },
+        "chat": {
+          "id": -5383518304,
+          "title": "Видеонаблик-тест",
+          "type": "group",
+          "all_members_are_administrators": false
+        },
+        "date": 1789029850,
+        "group_chat_created": true
+      }
+    },
+    {
+      "update_id": 17764585,
+      "message": {
+        "message_id": 13,
+        "from": {
+          "id": 47254369,
+          "is_bot": false,
+          "first_name": "Михаил",
+          "last_name": "Корнилов",
+          "username": "mihmig",
+          "language_code": "ru",
+          "is_premium": true
+        },
+        "chat": {
+          "id": -5383518304,
+          "title": "Видеонаблик-тест",
+          "type": "group",
+          "all_members_are_administrators": false
+        },
+        "date": 1789029851,
+        "new_chat_photo": [
+          {
+            "file_id": "AgACAgIAAxkBAAMNaqJt2nIbpSWSkpQpipCIQtqcL60AAiggaxu1TxlJ_xCYJa1__vABAAMCAANhAAM9BA",
+            "file_unique_id": "AQADKCBrG7VPGUkAAQ",
+            "file_size": 11876,
+            "width": 160,
+            "height": 160
+          },
+          {
+            "file_id": "AgACAgIAAxkBAAMNaqJt2nIbpSWSkpQpipCIQtqcL60AAiggaxu1TxlJ_xCYJa1__vABAAMCAANiAAM9BA",
+            "file_unique_id": "AQADKCBrG7VPGUln",
+            "file_size": 35230,
+            "width": 320,
+            "height": 320
+          },
+          {
+            "file_id": "AgACAgIAAxkBAAMNaqJt2nIbpSWSkpQpipCIQtqcL60AAiggaxu1TxlJ_xCYJa1__vABAAMCAANjAAM9BA",
+            "file_unique_id": "AQADKCBrG7VPGUkB",
+            "file_size": 105043,
+            "width": 640,
+            "height": 640
+          }
+        ]
+      }
+    }
+  ]
+}

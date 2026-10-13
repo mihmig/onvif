@@ -1,0 +1,4 @@
+### GetDeviceInformation
+POST {{base_url}}/onvif/media_service
+Authorization: Digest {{username}} {{password}}
+Content-Type: application/soap+xml; charset=utf-8
